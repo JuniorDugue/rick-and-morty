@@ -78,6 +78,11 @@
   flex-wrap: wrap;
   max-width: 800px;
   margin-top: 3rem;
+
+  border: 1px solid red;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .card {
