@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 const defaultEndpoint = "https://rickandmortyapi.com/api/character/";
 
@@ -30,11 +31,13 @@ export default function Home({ data }) {
 
         <ul className={styles.grid}>
           {results.map((results) => {
-            const { id, name } = results;
+            const { id, name, image } = results;
 
             return (
               <li key={id} className={styles.card}>
                 <a href="https://nextjs.org/docs">
+                  {/* <Image src={image} width={200} height={200} alt={`${name} thumbnail`}/> */}
+                  <img src={image} alt={`${name} thumbnail`}/>
                   <h3>{ name }</h3>
                 </a>
               </li>
