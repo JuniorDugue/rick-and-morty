@@ -82,11 +82,11 @@ export default function Home({ data }) {
       </Head>
 
       <main className={styles.main}>
-        {/* <h1 className={styles.title}>Wubba Lubba Dub Dub!</h1> */}
-        <h1 className={styles.title}>Rick and Morty Wiki</h1>
+        <h1 className={styles.title}>Wubba Lubba Dub Dub!</h1>
+        {/* <h1 className={styles.title}>Rick and Morty Wiki</h1> */}
 
-        {/* <p className={styles.description}>Rick and Morty Wiki</p> */}
-        <p className={styles.description}>Wubba Lubba Dub Dub!</p>
+        <p className={styles.description}>Rick and Morty Wiki</p>
+        {/* <p className={styles.description}>Wubba Lubba Dub Dub!</p> */}
 
         <form className={styles.search} onSubmit={handleOnSubmitSearch}>
           <input name="query" type="search" />
