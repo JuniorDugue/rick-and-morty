@@ -50,13 +50,28 @@ export default function Home({ data }) {
     request();
   }, [current]);
 
-  function handleLoadMore(){
-    setPage(prev => {
+  function handleLoadMore() {
+    setPage((prev) => {
       return {
-        ...prev, 
-        current: page?.next
-      }
-    })
+        ...prev,
+        current: page?.next,
+      };
+    });
+  }
+
+  function handleOnSubmitSearch(e) {
+    e.preventDefault();
+
+    const { currentTarget = {} } = e;
+    const fields = Array.from(currentTarget?.elements);
+    const fieldQuery = fields.find((field) => field.name === "query");
+
+    const value = fieldQuery.value || "";
+    const endpoint = `https://rickandmortyapi.com/api/character/?name=${value}`;
+
+    setPage({
+      current: endpoint,
+    });
   }
 
   return (
@@ -72,6 +87,11 @@ export default function Home({ data }) {
 
         {/* <p className={styles.description}>Rick and Morty Wiki</p> */}
         <p className={styles.description}>Wubba Lubba Dub Dub!</p>
+
+        <form className={styles.search} onSubmit={handleOnSubmitSearch}>
+          <input name="query" type="search" />
+          <button>Search</button>
+        </form>
 
         <ul className={styles.grid}>
           {results.map((results) => {

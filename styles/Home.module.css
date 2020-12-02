@@ -67,8 +67,7 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -79,7 +78,6 @@
   max-width: 800px;
   margin-top: 3rem;
 
-  border: 1px solid red;
   list-style: none;
   padding-left: 0;
   margin-left: 0;
@@ -123,5 +121,21 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+.search input {
+  margin-right: 0.5em;
+}
+
+@media (max-width: 600px) {
+  .search input {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .search input,
+  .search button {
+    width: 100%;
   }
 }
