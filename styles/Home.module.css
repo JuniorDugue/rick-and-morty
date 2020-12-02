@@ -129,7 +129,7 @@
   margin-right: 0.5em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .search input {
     margin-right: 0;
     margin-bottom: 0.5em;
