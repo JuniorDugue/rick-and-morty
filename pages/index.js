@@ -110,7 +110,7 @@ export default function Home({ data }) {
 
         <form className={styles.search} onSubmit={handleOnSubmitSearch}>
           <input name="query" type="search" />
-          <button>Search</button>
+          <button className={styles.search}>Search</button>
         </form>
 
         <ul className={styles.grid}>
@@ -145,7 +145,9 @@ export default function Home({ data }) {
           })}
         </ul>
         <p>
-          <button onClick={handleLoadMore}>Load More</button>
+          <button onClick={handleLoadMore} className={styles.loadmore}>
+            Load More
+          </button>
         </p>
       </main>
 

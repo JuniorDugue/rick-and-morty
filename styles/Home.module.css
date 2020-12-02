@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background: #210124; */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(158deg, rgba(2, 0, 36, 1) 0%, rgba(131, 93, 147, 1) 48%, rgb(97, 47, 101) 100%);
+  color: #fafafa;
 }
 
 .main {
@@ -125,8 +129,16 @@
   }
 }
 
+.loadmore {
+  cursor: pointer;
+}
+
 .search input {
   margin-right: 0.5em;
+}
+
+.search button:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 300px) {
@@ -166,6 +178,7 @@
 .back a {
   color: blue;
   text-decoration: underline;
+  background: #fafafa;
 }
 
 .back a:hover {
