@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const defaultEndpoint = "https://rickandmortyapi.com/api/character/";
 
@@ -99,11 +100,13 @@ export default function Home({ data }) {
 
             return (
               <li key={id} className={styles.card}>
-                <a href="https://nextjs.org/docs">
-                  {/* <Image src={image} width={200} height={200} alt={`${name} thumbnail`}/> */}
-                  <img src={image} alt={`${name} thumbnail`} />
-                  <h3>{name}</h3>
-                </a>
+                <Link href="/character/[id]" as={`/character/${id}`}>
+                  <a>
+                    {/* <Image src={image} width={200} height={200} alt={`${name} thumbnail`}/> */}
+                    <img src={image} alt={`${name} thumbnail`} />
+                    <h3>{name}</h3>
+                  </a>
+                </Link>
               </li>
             );
           })}
