@@ -1,5 +1,8 @@
 # Rick-and-Morty
-Rick and Morty app built with next.js &amp; framer motion using the [Rick &amp; Morty API](https://rickandmortyapi.com/) 
+
+[Rick and Morty App](https://rick-and-morty.jrdugue.vercel.app/) built with next.js &amp; [framer motion](https://www.npmjs.com/package/framer-motion) using the [Rick &amp; Morty API](https://rickandmortyapi.com/)
+
+![rick and morty preview app](/previewapp.gif)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
