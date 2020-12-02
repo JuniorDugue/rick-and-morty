@@ -1,5 +1,5 @@
-module.exports = {
-  images: {
-    domains: ['https://rickandmortyapi.com/api/character/avatar/],
-  },
-}
+// module.exports = {
+//   images: {
+//     domains: ['https://rickandmortyapi.com/api/character/avatar/],
+//   },
+// }
