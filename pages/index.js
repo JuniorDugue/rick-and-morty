@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const defaultEndpoint = "https://rickandmortyapi.com/api/character/";
 
@@ -83,8 +84,26 @@ export default function Home({ data }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Wubba Lubba Dub Dub!</h1>
-        {/* <h1 className={styles.title}>Rick and Morty Wiki</h1> */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.4,
+              },
+            },
+          }}
+        >
+          <h1 className={styles.title}>Wubba Lubba Dub Dub!</h1>
+          {/* <h1 className={styles.title}>Rick and Morty Wiki</h1> */}
+        </motion.div>
 
         <p className={styles.description}>Rick and Morty Wiki</p>
         {/* <p className={styles.description}>Wubba Lubba Dub Dub!</p> */}
@@ -99,7 +118,19 @@ export default function Home({ data }) {
             const { id, name, image } = results;
 
             return (
-              <li key={id} className={styles.card}>
+              <motion.li
+                key={id}
+                className={styles.card}
+                whileHover={{
+                  position: "relative",
+                  zIndex: 1,
+                  background: "white",
+                  scale: 1.2,
+                  transition: {
+                    duration: 0.2,
+                  },
+                }}
+              >
                 <Link href="/character/[id]" as={`/character/${id}`}>
                   <a>
                     {/* <Image src={image} width={200} height={200} alt={`${name} thumbnail`}/> */}
@@ -107,7 +138,7 @@ export default function Home({ data }) {
                     <h3>{name}</h3>
                   </a>
                 </Link>
-              </li>
+              </motion.li>
             );
           })}
         </ul>
